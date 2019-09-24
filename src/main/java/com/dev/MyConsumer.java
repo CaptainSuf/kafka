@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-public class KafkaConsumer extends Thread {
+public class MyConsumer extends Thread {
 
     private String topic;
 
-    public KafkaConsumer(String topic) {
+    public MyConsumer(String topic) {
         this.topic = topic;
     }
 
@@ -41,6 +41,6 @@ public class KafkaConsumer extends Thread {
     }
 
     public static void main(String[] args) {
-        new KafkaConsumer("test").start();
+        new MyConsumer("test").start();
     }
 }

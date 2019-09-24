@@ -4,15 +4,14 @@ import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
 import kafka.serializer.StringEncoder;
-import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
-public class KafkaProducer extends Thread{
+public class MyProducer extends Thread{
 
     private String topic;
 
-    public KafkaProducer(String topic) {
+    public MyProducer(String topic) {
         this.topic = topic;
     }
 
@@ -41,6 +40,6 @@ public class KafkaProducer extends Thread{
     }
 
     public static void main(String[] args) {
-        new KafkaProducer("test").start();
+        new MyProducer("test").start();
     }
 }
